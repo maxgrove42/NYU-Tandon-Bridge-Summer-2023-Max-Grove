@@ -47,14 +47,15 @@ int main()
     combinedDays = johnDays + billDays;
     
     //account for any extra overages over standard minutes per hour and hours per day
-    outputMinutes = combinedMinutes % MINUTES_PER_HOUR;
-    outputHours = combinedHours % HOURS_PER_DAY + combinedMinutes / MINUTES_PER_HOUR;
-    outputDays = combinedDays + combinedHours / HOURS_PER_DAY;
+    combinedHours += combinedMinutes / MINUTES_PER_HOUR;
+    combinedMinutes %= MINUTES_PER_HOUR;
+    combinedDays += combinedHours / HOURS_PER_DAY;
+    combinedHours %= HOURS_PER_DAY;
     
     cout << "The total time both of them worked together is: ";
-    cout << outputDays << " days, ";
-    cout << outputHours << " hours, and ";
-    cout << outputMinutes << " minutes." << endl;
+    cout << combinedDays << " days, ";
+    cout << combinedHours << " hours, and ";
+    cout << combinedMinutes << " minutes." << endl;
     
     
     
