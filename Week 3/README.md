@@ -4,8 +4,8 @@ Finally, we will talk about sets, a discrete collection on which many other disc
 
 Make sure that by the end of this week you:
 
-Understand how Boolean expressions are used to control the flow of programs in a different order than the default sequential flow.
-Are familiar with the syntax of the basic branching statements in C++ (if, if-else, switch).
-Are able to write programs that use data of all types covered, and use branching control.
-Are familiar with the basic sets’ operations
-Can prove properties related to sets
+- Understand how Boolean expressions are used to control the flow of programs in a different order than the default sequential flow.
+- Are familiar with the syntax of the basic branching statements in C++ (if, if-else, switch).
+- Are able to write programs that use data of all types covered, and use branching control.
+- Are familiar with the basic sets’ operations
+- Can prove properties related to sets
