@@ -9,12 +9,12 @@ Another topic we will cover this week is how to measure the performance of our p
 
 Make sure that by the end of this week you:
 
-Are able to make a call to a function
-Are able to define your own function
-Understand the flow of the control of your program when functions are involved.
-Are familiar with the scoping rules when functions are involved
-Are familiar with the run-time-stack model
-Understand the difference between call-by-value and call-by-reference.
-Are able to design and implement programs using procedural abstraction principles 
-Are familiar with the mathematical definition of big-O
-Are able to analyze the asymptotic running time of programs you implement
+- Are able to make a call to a function
+- Are able to define your own function
+- Understand the flow of the control of your program when functions are involved.
+- Are familiar with the scoping rules when functions are involved
+- Are familiar with the run-time-stack model
+- Understand the difference between call-by-value and call-by-reference.
+- Are able to design and implement programs using procedural abstraction principles 
+- Are familiar with the mathematical definition of big-O
+- Are able to analyze the asymptotic running time of programs you implement
