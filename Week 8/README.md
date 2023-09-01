@@ -10,20 +10,20 @@ Last topic we start talking this week is probability. Probability theory plays a
 
 Make sure that by the end of this week you:
 
-Are able to declare a static array
-Are able to access elements in an array and modify their values
-Understand how to calculate the physical address in the memory of an element, given only the address where the array starts at, and the index of the element
-Are able to initialize an array with values at declaration line
-Are able to define and call a function with an array as an argument
-Are familiar with the string class, as a sequential data type and its common operators and methods
-Understand that a probability distribution function assigns a probability to each outcome in a sample space
-Know the basic properties of a distribution function
-Able to calculate the probability of events
-Know the properties of the probabilities of the complement event, and of unions of events 
-Able to calculate conditional probabilities
-Know how to determine if events are independent
-Are familiar with “Bernoulli trials”, and the “binomial distribution” 
-Understand what random variables are, and know how to find the distribution of a random variable
-Know how to determine if random variables are independent 
-Understand what is the expected value of a random variable represents, and able to calculate the expected value of a given random variable
+- Are able to declare a static array
+- Are able to access elements in an array and modify their values
+- Understand how to calculate the physical address in the memory of an element, given only the address where the array starts at, and the index of the element
+- Are able to initialize an array with values at declaration line
+- Are able to define and call a function with an array as an argument
+- Are familiar with the string class, as a sequential data type and its common operators and methods
+- Understand that a probability distribution function assigns a probability to each outcome in a sample space
+- Know the basic properties of a distribution function
+- Able to calculate the probability of events
+- Know the properties of the probabilities of the complement event, and of unions of events 
+- Able to calculate conditional probabilities
+- Know how to determine if events are independent
+- Are familiar with “Bernoulli trials”, and the “binomial distribution” 
+- Understand what random variables are, and know how to find the distribution of a random variable
+- Know how to determine if random variables are independent 
+- Understand what is the expected value of a random variable represents, and able to calculate the expected value of a given random variable
 Are familiar with the “linearity of expectations” property
