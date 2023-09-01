@@ -4,6 +4,6 @@ By using iterative statements, we will be able to express computations that are 
 
 Make sure that by the end of this week you:
 
-Are familiar with the syntax of the basic iterative statements in C++ (while, for)
-Are able to write programs that use iterative control.
-Practiced a lot
+- Are familiar with the syntax of the basic iterative statements in C++ (while, for)
+- Are able to write programs that use iterative control.
+- Practiced a lot
