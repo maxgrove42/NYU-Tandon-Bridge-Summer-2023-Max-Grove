@@ -3,7 +3,7 @@
 //  main.cpp
 //  mg6392_hw13
 //
-//  Created by Max Grove on 9/30/23.
+//  Created by Max Grove
 //
 
 #include <iostream>
