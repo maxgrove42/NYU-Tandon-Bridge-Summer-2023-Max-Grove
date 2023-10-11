@@ -15,6 +15,9 @@ using namespace std;
 class World;
 
 const int GRID_SIZE = 20;
+const int NUM_ANTS = 100;
+const int NUM_BUGS = 5;
+
 const char BUG_SYMBOL = 'X';
 const char ANT_SYMBOL = 'o';
 
@@ -95,11 +98,12 @@ public:
 private:
     Organism* world[GRID_SIZE][GRID_SIZE];
 };
+
 int main()
 {
     srand((int)time(NULL));
     char goAgain;
-    World world(100,5);
+    World world(NUM_ANTS, NUM_BUGS);
     int iterate = 1;
     cout << "Press enter to step through time. Press any other key then enter to quit." << endl;
     do {
@@ -410,6 +414,14 @@ void World::timeStep() {
         doodlebugs[i]->move(*this);
     }
 
+    for (int i = 0; i < doodlebugs.size(); i++) {
+        doodlebugs[i]->breed(*this);
+    }
+    for (int i = 0; i < doodlebugs.size(); i++) {
+        doodlebugs[i]->starve(*this);
+    }
+    
+    //move ANTS
     for(int row = 0; row < GRID_SIZE; row++) {
         for(int col = 0; col < GRID_SIZE; col++) {
             if (world[row][col] == nullptr) continue;
@@ -417,15 +429,8 @@ void World::timeStep() {
                 ants.push_back(world[row][col]);
         }
     }
-    
     for (int i = 0; i < ants.size(); i++) {
         ants[i]->move(*this);
-    }
-    for (int i = 0; i < doodlebugs.size(); i++) {
-        doodlebugs[i]->breed(*this);
-    }
-    for (int i = 0; i < doodlebugs.size(); i++) {
-        doodlebugs[i]->starve(*this);
     }
     for (int i = 0; i < ants.size(); i++) {
         ants[i]->breed(*this);
