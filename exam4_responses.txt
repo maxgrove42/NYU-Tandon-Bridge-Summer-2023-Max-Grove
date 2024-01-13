@@ -1,0 +1,75 @@
+Name: Max Grove
+ 
+Email: mg6392@nyu.edu
+
+
+1) (3pts) Multiple Choice: B would be the most useful. If a process is in the blocked state, that indicates that it is waiting on something else. In a medium term Scheduling algorithm, we look to move processes into secondary storage. If we know when a process will be exiting the blocked state (i.e. when it receives the input it needs), we can move the processes with the longest time until they exit the blocked state into secondary storage.
+
+(While B is my answer, that being said, depending on the medium term scheduling algorithm implementation, the programmer may choose to implement a strictly "fair" algorithm, where processes only get a specific amount of CPU time. In this case, D would be useful information, as the programmer could move processes to the suspended state once they have had their time on the CPU and are back at the bottom of the totem pole).
+
+2) (3pts) Multiple Choice: C (Device drivers get system access, but now pretty much every device driver must go through certification)
+
+3) (3pts) Multiple Choice: A
+
+4) (3pts) Fill in the blank: Fetch-Decode-Execute
+
+5) (3pts) Fill in the blank: Top Level Domain (since we are querying the root server, we need to get the TLD server for .com, .edu, .org, whatever the top level domain is).
+
+
+6) (5 pts) Short answer: This is up to the source and the processes sending the connection. Since HTTP typically uses TCP, the source port information will be encoded in the packet. Naturally, one might expect to see port 80 on the source since it is HTTP traffic.
+
+
+7) (10 pts) Short answer: Since UDP does not guarantee data delivery, it could simply just ignore the data being sent. If a sender wants to ensure data is sent to the correct port, it should attempt to open a TCP connection with a three-way handshake. It could also open a port on that port number to receive the data if it is interested.
+
+8) (10 pts) Short answer: Sharing is useful for any processes that might want to share information and not have duplicated memory. For example, if we open Microsoft Word many times, we may want to share the actual program code. Libraries are also shared. Although sharing conflicts with protection, these shared memory items reduce the amount of space that each process takes up in memory. Protection can still be maintained by ensuring that processes only have access to the shared memory space and their own address space. 
+
+
+9) (10 pts) Short answer: If a page fault occurs, this means that we need to go and get the page from secondary storage. This indicates we don't have the page mapped into memory. When a page fault occurs, the kernel is invoked to go and retrieve the requested page from secondary storage, bring it into main memory, and update the Page Map Table so that future requests are mapped correctly to that page. Since a page fault occurred, we can likely presume that the process has used up all of the memory it has been allocated and has part of it's memory in secondary storage. Since this occurred, we will need to boot a page from the existing process's address space in main memory. Several algorithms exist to handle this, including the clock algorithm.
+
+
+10) (10 pts) Short answer: Data is fragmented to ensure it doesn't overload the data transfer method. Packets are fragmented on the Data Link Layer in preparation for the Physical Layer. The data link layer consists of how data is sent over the data transfer method, like Ethernet or Wifi. The fragments are then reassembled on the source side's data link layer (The OSI model assembles data in reverse order from the sender).
+
+
+11) (10 pts) Short answer: In a multi-threaded OS (thus assuming we are using kernel-level threads), in order to make a context switch from one thread to another in the same process, we must completely save the context of the current thread (this includes running point, Thread Control Block, registers, Thread ID, stack pointers, and more), move that context back to main memory (will not be moved to secondary storage unless the entire process is suspended and moved to secondary storage), and then bring in all the context for the new thread. This requires a good bit of overhead to complete. Additionally, since we are using kernel level threads and context switches are available, mutual exclusion is of paramount importance. We must have mechanisms (such as mutexes or semaphores) in place to ensure that if a thread is in its critical section, other threads cannot access resources used in that critical section. 
+
+
+12) (10 pts) Short answer: When a client selects its IP address from a DHCP discover, it will broadcast to all other devices via the DHCP that it is using that address. This will update the chosen DHCP server as updating that the selected IP address is now no longer available. It will also update the lease terms and expiry for that IP address on that client. The other unchosen DHCP server will have nothing change. It will still have the IP addresses it was allocated available for future devices to select. Since we are in an environment with multiple DHCP servers, it is of paramount importance to mention that the administrator must ensure that the multiple servers do not have overlapping IP addresses available. The administrator would have to step in to fix this problem if the same address were to be allocated to two devices and this would cause havoc on the network (and on the administrator's day!).
+
+
+13) (20 pts) Code (1 function):
+bool is_valid(TreeNode* root){
+    //base case
+    if (root == nullptr)
+        return true;
+    
+    //ensure that the root node is in valid criteria.
+    if (root->data > 2 || root->data < 0)
+        return false;
+    else {
+        //check left side. no need to continue if fails.
+        bool leftSide = is_valid(root->left);
+        if (leftSide == false) return false;
+        
+        //check right side. no need to continue if fails.
+        bool rightSide = is_valid(root->right);
+        if (rightSide == false) return false;
+        
+        //check this node. if we get to this point this means that
+        //left and right succeeded.
+        bool thisNode;
+        //check no kids
+        if (root->left == nullptr && root->right == nullptr)
+            thisNode = (root->data == 0);
+        //check if 1 kid left
+        else if (root->left == nullptr)
+            thisNode = (root->data == 1);
+        //check if 1 kid right
+        else if (root->right == nullptr)
+            thisNode = (root->data == 1);
+        //check if 2 kids
+        else
+            thisNode = (root->data == 2);
+        
+        return thisNode;
+    }
+}
