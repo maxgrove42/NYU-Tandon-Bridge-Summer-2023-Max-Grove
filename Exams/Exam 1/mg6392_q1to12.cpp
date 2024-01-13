@@ -22,7 +22,7 @@ int main() {
      7d)    True
      7e)    False
      7f)    True
-     7g)    True
+     7g)    False
      7h)    True
      7i)    True
      7j)    True

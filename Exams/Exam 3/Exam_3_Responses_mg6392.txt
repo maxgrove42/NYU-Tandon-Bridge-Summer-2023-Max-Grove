@@ -1,0 +1,183 @@
+Name: Max Grove
+ 
+
+NYU Email: mg6392@nyu.edu
+
+
+
+
+Solutions to midterm exam
+
+
+Question 1 (Multiple choice answer): B
+Question 2 (Multiple choice answer): A and D (arrays / vectors can be sorted with mergeSort in O(n*log(n)) time and trees, when set up to balance correctly, can perform sorting in n*log(n) time as well)
+
+Question 3 (Multiple choice answer): A
+Question 4 (Provide Code): ptr->member();
+Question 5 (Conversion): 234*+567/++
+
+Question 6 (One line of code): cout << root->right->data << endl;
+
+Question 7 (Algorithm; English answer): 
+Perform an in-order traversal (process left subtree, then the node, then the right subtree) of the binary search tree, where we place all the values into a vector. This is an at-worst O(n) activity. This will require linear space (copying the values into a vector). Since the in-order traversal outputs in ordered order, we can compare one item to the item directly preceding it to see if there are duplicates. Begin with the second item of the vector and compare to the first. If they are equal, there are duplicates. Return true. Otherwise, compare the third item to the second and compare. So on and so forth until we look at the final item in the list compared to the second-to-last. If there was no duplicates, return false. This comparison is also O(n). Thus, we have O(n + n) worst case. This is O(n) time complexity and O(n) space complexity.
+
+If memory complexity is an issue, but time complexity is not as important, we could perform an analysis on each node of the tree and compare it to every other node. One could start with the root, then perform an inorder traversal, flagging if there is a single node that is equal to the original node. Then perform this analysis on the left and right subtrees. This would be O(n^2) time complexity, but O(1) space complexity. You would have to compare each node to each of the subnodes, as there could be an instance of a tree that looks like this:
+5
+ \
+  6
+ /
+5
+
+
+Question 8 (Algorithm; English answer):
+Ensure that the first node is equal to the Doubly Linked List's head. Begin with the first node in the list (let's call it firstNode). Take the next node (Let's call it nextNode). Ensure firstNode->next = nextNode->prev (that is, ensure the firstNode links forward to the nextNode and the nextNode links backwards to the firstNode). Advance the firstNode to nextNode (firstNode = firstNode->next) and nextNode to it's next node (nextNode = nextNode->next). Perform the same comparison until nextNode->next == nullptr (that is, the node after nextNode is nullptr, which indicates we are at the tail). If the doubly linked list supports tail nodes, ensure that the final nextNode is equal to tail. 
+
+
+Question 9: (Program):
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+using namespace std;
+
+string FILE_NAME = "exam3.txt";
+
+void openStream(ifstream &inStream);
+
+template<class X, class Y>
+void sort(vector<X>& first, vector<Y>& second);
+/*
+ Sort will take in two vectors and sort both based on the order of first.
+ That is, the order of second will be determined by the sort order of first.
+ */
+
+int main() {
+    ifstream inStream;
+    ofstream outStreamID, outStreamGrade;
+    vector<int> ids;
+    vector<double> grades;
+    inStream.open(FILE_NAME);
+    outStreamID.open("sortedbyID.txt");
+    outStreamGrade.open("sortedbyGrade.txt");
+    
+    
+    int tempId;
+    double tempGrade;
+    while (inStream >> tempId) {
+        ids.push_back(tempId);
+        inStream >> tempGrade;
+        grades.push_back(tempGrade);
+    }
+    if (ids.size() != grades.size()) {
+        cout << "Number of students does not equal number of grades. Exiting." << endl;
+        exit(1);
+    }
+    sort(ids, grades);
+    for (int i = 0; i < ids.size(); i++) {
+        outStreamID << ids[i] << " " << grades[i] << endl;
+    }
+    sort(grades, ids);
+    for (int i = 0; i < ids.size(); i++) {
+        outStreamGrade << ids[i] << " " << grades[i] << endl;
+    }
+    return 0;
+}
+
+
+/*
+ I have chosen to implement these sorting algorithms with Insertion Sort for coding simplicity.
+ This carries O(n^2) efficiency. If one wishes to speed these algorithms,
+ they could implement with mergesort if space is less of an issue, or
+ quicksort if space is an issue, but they are okay with worst case O(n^2) but average case O(n*logn)
+ */
+template<class X, class Y>
+void sort(vector<X>& first, vector<Y>& second) {
+    for (int i = 1; i < first.size(); i++) {
+        for (int j = i; j > 0; j--) {
+            if (first[j-1] < first[j]) {
+                swap(first[j-1], first[j]);
+                swap(second[j-1], second[j]);
+            }
+            else
+                break;
+        }
+    }
+}
+
+
+Question 10: (Classes):
+
+#include <iostream>
+using namespace std;
+
+//vehicle class. requires incurToll to be defined in derived class.
+class Vehicle {
+    int tollTotal = 0;
+public:
+    virtual int incurToll() = 0;
+    void addToll(int amount);
+    int getTollTotal() const;
+};
+
+class Car : public Vehicle {
+    int tollCost = 5;
+public:
+    virtual int incurToll();
+};
+class Truck : public Vehicle {
+    int tollCost = 25;
+public:
+    virtual int incurToll();
+};
+
+class TollBooth {
+    int totalTolls = 0;
+public:
+    int getTotalTolls() const;
+    void processToll(Vehicle* vehicle);
+};
+
+int main() {
+    Car* car1 = new Car;
+    Car* car2 = new Car;
+    Truck* truck1 = new Truck;
+    Truck* truck2 = new Truck;
+    
+    TollBooth myTollBooth;
+    
+    myTollBooth.processToll(car1);
+    cout << myTollBooth.getTotalTolls() << endl;
+    myTollBooth.processToll(car2);
+    cout << myTollBooth.getTotalTolls() << endl;
+    myTollBooth.processToll(truck1);
+    cout << myTollBooth.getTotalTolls() << endl;
+    myTollBooth.processToll(truck2);
+    cout << myTollBooth.getTotalTolls() << endl;
+    
+    return 0;
+}
+
+int TollBooth::getTotalTolls() const {
+    return totalTolls;
+}
+void TollBooth::processToll(Vehicle* vehicle) {
+    totalTolls += vehicle->incurToll();
+}
+
+int Vehicle::getTollTotal() const {
+    return tollTotal;
+}
+void Vehicle::addToll(int amount) {
+    tollTotal += amount;
+}
+
+int Car::incurToll() {
+    addToll(tollCost);
+    return tollCost;
+}
+int Truck::incurToll() {
+    addToll(tollCost);
+    return tollCost;
+}
+

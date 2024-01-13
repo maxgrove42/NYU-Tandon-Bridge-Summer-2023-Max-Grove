@@ -24,7 +24,8 @@
     = 9/2*3^k - 1/2
     This completes our proof and shows the sum from i = 0 to n of 3^n is equal to 1/2 * (3 ^ (n+1) - 1 ) for any non-positive integer using mathematical induction.
  
-    2a. We must choose all the orderings of 5 students where one is Hal plus all the orderings of 5 students where 1 is Ida and subtract all the orderings of 5 students where Hal and Ida are in the picture.
+    2a. (2A RESPONSE MARKED INCORRECT)
+        We must choose all the orderings of 5 students where one is Hal plus all the orderings of 5 students where 1 is Ida and subtract all the orderings of 5 students where Hal and Ida are in the picture.
         = C(9,4) * 5 + C(9,4) * 5 - 5*4*C(8,3)
         We first choose all the orderings of 4 students plus where Hal stands in the photo.
         We add all the orderings of 4 students plus where Ida stands in the photo.
