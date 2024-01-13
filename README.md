@@ -1,4 +1,10 @@
 Final Grade: A / Certificate with Distinction
+- Exam 1 Grade: 99 / 110
+- Exam 2 Grade: 92 / 100
+- Exam 3 Grade: 97 / 100
+- Exam 4 Grade: Unreleased grade
+- Homework Grade: 99 / 100
+- Exams have been corrected where applicable.
 
 Program Description
 
