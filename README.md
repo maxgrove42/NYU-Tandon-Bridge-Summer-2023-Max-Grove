@@ -5,11 +5,7 @@ Final Grade: A / Certificate with Distinction
 - Exam 4 Grade: Unreleased grade
 - Homework Grade: 99 / 100
 - Exams have been corrected where applicable.
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 6512e8622b58fa62662638b8a712e1fda74b243d
 Program Description
 
 The bridge program is an intensive study of the required topics which are requisite information
