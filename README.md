@@ -1,4 +1,4 @@
-Final Grade: A
+Final Grade: A / Certificate with Distinction
 
 Program Description
 
