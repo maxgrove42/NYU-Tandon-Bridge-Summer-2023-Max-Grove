@@ -1,3 +1,5 @@
+Final Grade: A
+
 Program Description
 
 The bridge program is an intensive study of the required topics which are requisite information
