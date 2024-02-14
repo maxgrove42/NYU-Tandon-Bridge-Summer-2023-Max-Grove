@@ -1,4 +1,4 @@
-Max Grove's Course Repository for NYU Tandon Bridge (24-Week | Summer 2024)
+Max Grove's Course Repository for NYU Tandon Bridge (24-Week | Summer 2023)
 
 Final Grade: A / Certificate with Distinction
 - Exam 1 Grade: 99 / 110
