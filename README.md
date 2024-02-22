@@ -33,13 +33,13 @@ This repository includes materials, notes, and projects on the following topics:
 - Discrete Mathematics: Logic, Proofs, Induction, Counting, Sets, Probability
 - Algorithms: Analysis, Searching, Sorting, Complexity
 - Systems Programming: Processes & Threads, Thread Concurrency, Deadlocks
-- ...and many more. [[Link to detailed topics](https://engineering.nyu.edu/academics/programs/nyu-tandon-bridge/preparatory-resources#chapter-id-51872)]
+- and many more. [[Link to detailed topics](https://engineering.nyu.edu/academics/programs/nyu-tandon-bridge/preparatory-resources#chapter-id-51872)]
 
 ## Connect and Share
 
 I encourage discussions, questions, and collaboration. Feel free to fork this repository, star it if you find it useful, and reach out to me for any queries or discussions.
 
-[[Link to LinkedIn profile](https://www.linkedin.com/in/maxbgrove/)]
+[[My LinkedIn profile](https://www.linkedin.com/in/maxbgrove/)]
 
 ---
 
