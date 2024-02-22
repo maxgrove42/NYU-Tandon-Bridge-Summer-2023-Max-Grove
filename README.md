@@ -1,37 +1,47 @@
-Max Grove's Course Repository for NYU Tandon Bridge (24-Week | Summer 2023)
+# Max Grove's NYU Tandon Bridge Program Repository (Summer 2023)
 
-Final Grade: A / Certificate with Distinction
-- Exam 1 Grade: 99 / 110
-- Exam 2 Grade: 92 / 100
-- Exam 3 Grade: 97 / 100
-- Exam 4 Grade: Unreleased grade
-- Homework Grade: 99 / 100
-- Exam responses have been corrected where applicable.
+Welcome to my course repository for the NYU Tandon School of Engineering's Bridge Program, completed in the summer of 2023. This intensive program is designed to equip students without a technical background with the foundational skills necessary for success in STEM graduate programs. This repository contains coursework, projects, exams, and a comprehensive study guide.
 
-Program Description
+## Final Grade: A / Certificate with Distinction
+- **Exam 1 Grade:** 99 / 110
+- **Exam 2 Grade:** 92 / 100
+- **Exam 3 Grade:** 97 / 100
+- **Exam 4 Grade:** not released by instructors
+- **Homework Grade:** 99 / 100
 
-The bridge program is an intensive study of the required topics which are requisite information
-for general admission into the NYU-Tandon CSE graduate program. Conventionally, covering
-these topics take three to four semesters to complete and must be done sequentially. Under the
-bridge program, you will complete your studies in one, intensive, semester which includes all of
-the material from the conventional courses in a more compact form. The bridge will require as
-much as 100 hours of study, but scheduling of each module can be done at a time of your
-discretion, due to the online nature of the program. Working at an average of about 30 hours of
-study each week, the bridge program will be completed in one semester. You are expected, and
-required to attend a weekly online meeting as well.
+## Program Description
 
-Program Objectives
+The NYU Tandon Bridge program is designed as an accelerated pathway for individuals looking to enter the field of computer science and engineering but lack the formal education or background. It covers a comprehensive curriculum ranging from discrete math to operating systems principles, all within a single semester. This repository not only showcases my work but also serves as a resource for future students and applicants to the NYU Tandon's graduate programs.
 
-By the end of the CS Bridge Program students should have:
-1. Basic understanding of how data is represented and how computers execute instructions
-to use and modify data in order to solve problems.
-2. Understanding of computational thinking: how to develop algorithms using decisions,
-repetition, and decomposition into manageable components to solve problems.
-3. Ability to implement and test moderate sized programs in C++, using constructs
-including variables, operators, decision statements, loops, functions, and built-in data
-types.
-4. Ability to understand basic object-oriented programming concepts.
-5. Ability to code, use, analyze the performance of, and modify fundamental data structures.
-6. Have a firm understanding of operating systems topics related to processes, threads,
-thread concurrency, deadlocks, and memory management.
-7. Understanding of fundamental concepts in discrete math
+## Program Objectives
+
+By the end of the program, I achieved:
+
+- A basic understanding of data representation and computational problem-solving.
+- Proficiency in developing algorithms and implementing moderate-sized programs in C++.
+- A solid foundation in object-oriented programming, data structures, and algorithm analysis.
+- Insight into operating systems, including processes, threads, and memory management.
+- An understanding of discrete mathematics and its applications in computer science.
+
+## Course Topics Covered
+
+This repository includes materials, notes, and projects on the following topics:
+
+- Application, Network, and Transport Layer protocols
+- Data Structures: Arrays, Linked Lists, Trees, Stacks, and Queues
+- Programming Concepts: Functions, Recursion, OOP, Memory Management
+- Discrete Mathematics: Logic, Proofs, Induction, Counting, Sets, Probability
+- Algorithms: Analysis, Searching, Sorting, Complexity
+- Systems Programming: Processes & Threads, Thread Concurrency, Deadlocks
+- ...and many more. [[Link to detailed topics](https://engineering.nyu.edu/academics/programs/nyu-tandon-bridge/preparatory-resources#chapter-id-51872)]
+
+## Connect and Share
+
+I encourage discussions, questions, and collaboration. Feel free to fork this repository, star it if you find it useful, and reach out to me for any queries or discussions.
+
+[[Link to LinkedIn profile](https://www.linkedin.com/in/maxbgrove/)]
+
+---
+
+#NYUTandonBridge #ComputerScience #STEMGraduateProgram #DataStructures #Algorithms #OperatingSystems #DiscreteMath
+
