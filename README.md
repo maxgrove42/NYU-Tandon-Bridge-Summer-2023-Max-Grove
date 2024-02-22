@@ -1,8 +1,8 @@
 # Max Grove's NYU Tandon Bridge Program Repository (Summer 2023)
 
-Welcome to my course repository [https://github.com/maxgrove42/NYU-Tandon-Bridge-Summer-2023-Max-Grove/] for the NYU Tandon School of Engineering's Bridge Program, completed in the summer of 2023. This intensive program is designed to equip students without a technical background with the foundational skills necessary for success in STEM graduate programs. This repository contains coursework, projects, exams, and a comprehensive study guide.
+Welcome to my repository [[Link to course repository](https://github.com/maxgrove42/NYU-Tandon-Bridge-Summer-2023-Max-Grove/)] for the NYU Tandon School of Engineering's Bridge Program, completed in the summer of 2023. This intensive program is designed to equip students without a technical background with the foundational skills necessary for success in STEM graduate programs. This repository contains coursework, projects, exams, and a comprehensive study guide.
 
-You can access the course materials here: [https://github.com/maxgrove42/NYU-Tandon-Bridge-Summer-2023-Max-Grove/]
+You can access the course materials [[here](https://github.com/maxgrove42/NYU-Tandon-Bridge-Summer-2023-Max-Grove/)]
 
 ## Final Grade: A / Certificate with Distinction
 - **Exam 1 Grade:** 99 / 110
